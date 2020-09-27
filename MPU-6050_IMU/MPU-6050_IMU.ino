@@ -219,17 +219,3 @@ void setup_mpu_6050_registers(){
   Wire.write(0x08);                                                    //Set the requested starting register
   Wire.endTransmission();                                              //End the transmission
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
