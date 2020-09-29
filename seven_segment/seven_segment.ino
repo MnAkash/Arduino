@@ -20,6 +20,7 @@ void loop()
 }
 void digit(int n)
 {
+  // {a,b,c,d,e,f,g}
   int a,p[10][7]={{1,1,1,1,1,1,0}, //0
                    {0,1,1,0,0,0,0}, //1
                    {1,1,0,1,1,0,1}, //2
@@ -36,5 +37,3 @@ void digit(int n)
     digitalWrite(a,p[n][a-7]);             
   }
 }
-
-

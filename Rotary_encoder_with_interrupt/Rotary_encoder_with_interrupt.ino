@@ -5,7 +5,7 @@ const int PinA = 21;
 const int PinB = 20;
 
 // Used for the push button switch
-const int PinSW = 8;
+const int PinSW = 13;
 
 // Keep track of last rotary value
 int lastCount = 50;
@@ -31,7 +31,7 @@ void isr ()  {
     }
 
     // Restrict value from 0 to +100
-    //virtualPosition = min(100, max(0, virtualPosition));
+    virtualPosition = min(100, max(0, virtualPosition));
 
 
   }
@@ -44,7 +44,7 @@ void isr ()  {
 // ------------------------------------------------------------------
 void setup() {
   // Just whilst we debug, view output on serial monitor
-  Serial.begin(115200);
+  Serial.begin(9600);
 
   // Rotary pulses are INPUTs
   pinMode(PinA, INPUT);
